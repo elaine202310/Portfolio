@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 在正文解析前处理旧链接和语言偏好；不隐藏正文，不等待外部脚本。 -->
+    <script>
+      (() => {
+        const url = new URL(location.href);
+        const explicit = url.searchParams.get("lang");
+        const current = document.documentElement.lang;
+        let preferred = current;
+        try {
+          if (current === "en") preferred = localStorage.getItem("preferred-language") || current;
+        } catch {}
+        const language = explicit === "en" || explicit === "zh-CN" ? explicit : preferred;
+        if (language === current) return;
+        const filename = url.pathname.split("/").pop() || "index.html";
+        const base = filename.replace(/\.zh\.html$/, ".html");
+        url.pathname = url.pathname.slice(0, url.pathname.lastIndexOf("/") + 1)
+          + (language === "zh-CN" ? base.replace(/\.html$/, ".zh.html") : base);
+        url.searchParams.set("lang", language);
+        location.replace(url.href);
+      })();
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="胡娇的双语个人网站：计算机科学、实用软件、业务系统与数字项目。" />
+    <title>胡娇 — 首页</title>
+    <link rel="stylesheet" href="site.css" />
+    <script src="site-content.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body class="is-zh" data-page="home">
+    <!--
+      THESIS: A personal website, not a recruitment landing page.
+      OWN-WORLD: Near-white, warm charcoal, restrained terracotta; Manrope and native Chinese type.
+      STORY: Meet Hu Jiao, then explore experience, projects, and photography on separate pages.
+      FIRST VIEWPORT: A balanced reading column, modest name, personal subtitle, bio and contact.
+      FORM: User-approved white preview, with subsequently approved copy and independent pages.
+    -->
+    <a class="skip-link" href="#main" data-i18n="skip">跳到主要内容</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.zh.html?lang=zh-CN" aria-label="胡娇，首页" data-i18n-aria="brandLabel">
+        <span data-i18n="profileName">胡娇</span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="主导航" data-i18n-aria="navLabel">
+        <a href="index.zh.html?lang=zh-CN" data-page="home" data-i18n="navProfile">首页</a>
+        <a href="experience.zh.html?lang=zh-CN" data-page="experience" data-i18n="navExperience">经历</a>
+        <a href="projects.zh.html?lang=zh-CN" data-page="projects" data-i18n="navProject">项目</a>
+        <a href="photography.zh.html?lang=zh-CN" data-page="photography" data-i18n="navGallery">摄影</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-i18n-aria="menuLabel" aria-label="导航菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16" /></svg>
+        </button>
+        <div class="language-switcher" role="group" aria-label="语言" data-i18n-aria="languageLabel">
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="zh-CN" aria-pressed="true">中文</button>
+        </div>
+        <a class="header-email" href="mailto:jiaohu368@gmail.com" data-i18n="contactShort">邮件</a>
+      </div>
+    </header>
+
+    <main id="main" class="page page-home">
+      <section class="home-intro" aria-labelledby="profile-title">
+        <h1 id="profile-title" data-i18n="profileName">胡娇</h1>
+        <p class="hero-subtitle" data-i18n="heroTitle">探索想法，动手创造。</p>
+        <div class="intro-copy">
+          <p data-i18n="heroBody1">我目前在悉尼大学攻读计算机科学硕士，喜欢借助技术与人工智能探索不同领域，在实践中学习，把想法变成现实。</p>
+          <p data-i18n="heroBody2">这里记录我的工作经历、独立项目与摄影。</p>
+        </div>
+        <div class="contact-row">
+          <a class="contact-button" href="mailto:jiaohu368@gmail.com"><span data-i18n="contactLabel">联系我</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+          <a class="plain-email" href="mailto:jiaohu368@gmail.com">jiaohu368@gmail.com</a>
+        </div>
+      </section>
+
+      <!-- 首页简短预览；完整内容保留在独立页面。 -->
+      <section class="home-story" aria-labelledby="home-work">
+        <h2 id="home-work" data-i18n="homeWorkTitle">工作与实践</h2>
+        <div class="home-story-copy">
+          <p data-i18n="homeWorkBody">回到校园之前，我有三年的业务系统与流程相关工作经历。期间，我也参与了一个户外用品商家的 Shopify 独立站搭建与运营。</p>
+          <a class="story-link" href="experience.zh.html?lang=zh-CN"><span data-i18n="homeWorkLink">了解我的经历</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+        </div>
+      </section>
+
+      <!-- 首页简短预览；完整内容保留在独立页面。 -->
+      <section class="home-story" aria-labelledby="home-life">
+        <h2 id="home-life" data-i18n="homeLifeTitle">屏幕之外</h2>
+        <div class="home-story-copy">
+          <p data-i18n="homeLifeBody">工作和学习之外，我喜欢摄影与徒步。我曾参与一次跨年活动的现场摄影，也想继续尝试轻松、自然的人像拍摄。</p>
+          <a class="story-link" href="photography.zh.html?lang=zh-CN"><span data-i18n="homeLifeLink">摄影记录</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p data-i18n="location">澳大利亚悉尼</p>
+      <p>© <span id="year"></span> <span data-i18n="profileName">胡娇</span></p>
+    </footer>
+  </body>
+</html>

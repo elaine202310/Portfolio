@@ -2,6 +2,12 @@
 // 摄影专题和照片请编辑 gallery-data.js；项目经历请编辑 portfolio-data.js。
 window.translations = {
   en: {
+    homeWorkTitle: "Work & practice",
+    homeWorkBody: "Before returning to university, I spent three years working with business systems and workflows. Along the way, I also helped build and operate a Shopify store for an outdoor-living business.",
+    homeWorkLink: "More about my experience",
+    homeLifeTitle: "Outside the screen",
+    homeLifeBody: "Photography and hiking are part of my life outside work and study. I helped photograph a New Year's Eve event, and I'd like to keep exploring natural, relaxed portraits.",
+    homeLifeLink: "Photography notes",
     pageTitle: "Hu Jiao — Computer Science & Digital Projects",
     pageDescription: "Hu Jiao — computer science student working across practical software, business systems, and digital projects.",
     skip: "Skip to main content",
@@ -75,6 +81,12 @@ window.translations = {
     backToTop: "Back to top"
   },
   "zh-CN": {
+    homeWorkTitle: "工作与实践",
+    homeWorkBody: "回到校园之前，我有三年的业务系统与流程相关工作经历。期间，我也参与了一个户外用品商家的 Shopify 独立站搭建与运营。",
+    homeWorkLink: "了解我的经历",
+    homeLifeTitle: "屏幕之外",
+    homeLifeBody: "工作和学习之外，我喜欢摄影与徒步。我曾参与一次跨年活动的现场摄影，也想继续尝试轻松、自然的人像拍摄。",
+    homeLifeLink: "摄影记录",
     pageTitle: "胡娇 — 计算机与数字项目",
     pageDescription: "胡娇的双语个人网站：计算机科学、实用软件、业务系统与数字项目。",
     skip: "跳到主要内容",
@@ -148,5 +160,4 @@ window.translations = {
     backToTop: "返回顶部"
   }
 };
-
 

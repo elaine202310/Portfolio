@@ -4,8 +4,8 @@
   "title": "Design System: Hu Jiao Personal Website",
   "extensions": {
     "colorMeta": {
-      "paper": { "role": "neutral", "displayName": "Near-white Paper", "canonical": "#fdfcfa" },
-      "ink": { "role": "neutral", "displayName": "Warm Charcoal", "canonical": "#302d29" },
+      "paper": { "role": "neutral", "displayName": "Near-white Paper", "canonical": "#f9f8f6" },
+      "ink": { "role": "neutral", "displayName": "Warm Charcoal", "canonical": "#222222" },
       "muted": { "role": "neutral", "displayName": "Muted Warm Gray", "canonical": "#69635e" },
       "accent": { "role": "primary", "displayName": "Terracotta", "canonical": "#a64f38" },
       "line": { "role": "neutral", "displayName": "Warm Hairline", "canonical": "#dedad5" },
@@ -53,14 +53,14 @@
       "kind": "nav",
       "description": "Four independent native page links.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"index.html\" aria-current=\"page\">Home</a><a href=\"experience.html\">Experience</a><a href=\"projects.html\">Projects</a><a href=\"photography.html\">Photography</a></nav>",
-      "css": ".ds-nav{display:flex;gap:26px;font:16px/1.75 Manrope,sans-serif;color:var(--ink,#302d29)}.ds-nav a{position:relative;display:block;padding:10px 0;text-decoration:none;color:inherit}.ds-nav a::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--accent,#a64f38);transform:scaleX(0);transform-origin:left;transition:transform 220ms cubic-bezier(.16,1,.3,1)}.ds-nav a:hover,.ds-nav a[aria-current]{color:var(--accent,#a64f38)}.ds-nav a:hover::after,.ds-nav a[aria-current]::after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid var(--accent,#a64f38);outline-offset:5px}@media(max-width:600px){.ds-nav{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px}}@media(prefers-reduced-motion:reduce){.ds-nav a::after{transition:none}}"
+      "css": ".ds-nav{display:flex;gap:26px;font:16px/1.75 Manrope,sans-serif;color:var(--ink,#222222)}.ds-nav a{position:relative;display:block;padding:10px 0;text-decoration:none;color:inherit}.ds-nav a::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--accent,#a64f38);transform:scaleX(0);transform-origin:left;transition:transform 220ms cubic-bezier(.16,1,.3,1)}.ds-nav a:hover,.ds-nav a[aria-current]{color:var(--accent,#a64f38)}.ds-nav a:hover::after,.ds-nav a[aria-current]::after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid var(--accent,#a64f38);outline-offset:5px}@media(max-width:600px){.ds-nav{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px}}@media(prefers-reduced-motion:reduce){.ds-nav a::after{transition:none}}"
     },
     {
       "name": "Language Controls",
       "kind": "custom",
       "description": "Plain bilingual buttons with an underlined selected language.",
       "html": "<div class=\"ds-language\" role=\"group\" aria-label=\"Language\"><button aria-pressed=\"true\">EN</button><button aria-pressed=\"false\">中文</button></div>",
-      "css": ".ds-language{display:flex;align-items:center;gap:3px}.ds-language button{border:0;background:none;min-height:44px;min-width:38px;padding:4px;color:var(--muted,#69635e);font:16px/1.75 Manrope,'PingFang SC','Microsoft YaHei',sans-serif;cursor:pointer}.ds-language button[aria-pressed=true]{color:var(--ink,#302d29);text-decoration:underline;text-underline-offset:6px}.ds-language button:focus-visible{outline:2px solid var(--accent,#a64f38);outline-offset:5px}"
+      "css": ".ds-language{display:flex;align-items:center;gap:3px}.ds-language button{border:0;background:none;min-height:44px;min-width:38px;padding:4px;color:var(--muted,#69635e);font:16px/1.75 Manrope,'PingFang SC','Microsoft YaHei',sans-serif;cursor:pointer}.ds-language button[aria-pressed=true]{color:var(--ink,#222222);text-decoration:underline;text-underline-offset:6px}.ds-language button:focus-visible{outline:2px solid var(--accent,#a64f38);outline-offset:5px}"
     },
     {
       "name": "Photography Empty State",

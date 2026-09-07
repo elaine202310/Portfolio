@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 在正文解析前处理旧链接和语言偏好；不隐藏正文，不等待外部脚本。 -->
+    <script>
+      (() => {
+        const url = new URL(location.href);
+        const explicit = url.searchParams.get("lang");
+        const current = document.documentElement.lang;
+        let preferred = current;
+        try {
+          if (current === "en") preferred = localStorage.getItem("preferred-language") || current;
+        } catch {}
+        const language = explicit === "en" || explicit === "zh-CN" ? explicit : preferred;
+        if (language === current) return;
+        const filename = url.pathname.split("/").pop() || "index.html";
+        const base = filename.replace(/\.zh\.html$/, ".html");
+        url.pathname = url.pathname.slice(0, url.pathname.lastIndexOf("/") + 1)
+          + (language === "zh-CN" ? base.replace(/\.html$/, ".zh.html") : base);
+        url.searchParams.set("lang", language);
+        location.replace(url.href);
+      })();
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="胡娇的双语个人网站：计算机科学、实用软件、业务系统与数字项目。" />
+    <title>胡娇 — 经历</title>
+    <link rel="stylesheet" href="site.css" />
+    <script src="site-content.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body class="is-zh" data-page="experience">
+    <!--
+      THESIS: A personal website, not a recruitment landing page.
+      OWN-WORLD: Near-white, warm charcoal, restrained terracotta; Manrope and native Chinese type.
+      STORY: Meet Hu Jiao, then explore experience, projects, and photography on separate pages.
+      FIRST VIEWPORT: A balanced reading column, modest name, personal subtitle, bio and contact.
+      FORM: User-approved white preview, with subsequently approved copy and independent pages.
+    -->
+    <a class="skip-link" href="#main" data-i18n="skip">跳到主要内容</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.zh.html?lang=zh-CN" aria-label="胡娇，首页" data-i18n-aria="brandLabel">
+        <span data-i18n="profileName">胡娇</span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="主导航" data-i18n-aria="navLabel">
+        <a href="index.zh.html?lang=zh-CN" data-page="home" data-i18n="navProfile">首页</a>
+        <a href="experience.zh.html?lang=zh-CN" data-page="experience" data-i18n="navExperience">经历</a>
+        <a href="projects.zh.html?lang=zh-CN" data-page="projects" data-i18n="navProject">项目</a>
+        <a href="photography.zh.html?lang=zh-CN" data-page="photography" data-i18n="navGallery">摄影</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-i18n-aria="menuLabel" aria-label="导航菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16" /></svg>
+        </button>
+        <div class="language-switcher" role="group" aria-label="语言" data-i18n-aria="languageLabel">
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="zh-CN" aria-pressed="true">中文</button>
+        </div>
+        <a class="header-email" href="mailto:jiaohu368@gmail.com" data-i18n="contactShort">邮件</a>
+      </div>
+    </header>
+
+    <main id="main" class="page page-experience">
+      <section class="resume-section section-observer" id="experience" aria-labelledby="experience-title">
+        <header class="section-header">
+          <h1 id="experience-title" data-i18n="experienceTitle">工作经历</h1>
+        </header>
+        <div class="section-content timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <time data-i18n="job1Date">三年</time>
+              <span data-i18n="job1Place">全职</span>
+            </div>
+            <div class="timeline-main">
+              <h3 data-i18n="job1Title">业务系统与流程协调</h3>
+              <p class="organization" data-i18n="job1Company">西部印象文化旅游股份有限公司</p>
+              <ul>
+                <li data-i18n="job1Bullet1">负责内部办公自动化与工作流系统的日常管理及配置，支持各部门业务流程运转。</li>
+                <li data-i18n="job1Bullet2">梳理跨部门审批需求，将业务规则转化为数字化流程及系统配置要求。</li>
+                <li data-i18n="job1Bullet3">汇总用户反馈，形成明确的变更需求，并协调外部技术团队跟进。</li>
+                <li data-i18n="job1Bullet4">对接业务部门与财务团队，协同处理流程使用中的问题。</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <time data-i18n="job2Date">2025 年 5 月 — 2025 年 7 月</time>
+              <span data-i18n="job2Place">远程</span>
+            </div>
+            <div class="timeline-main">
+              <h3 data-i18n="job2Title">前端与产品运营助理</h3>
+              <p class="organization" data-i18n="job2Company">Zion · 兼职</p>
+              <ul>
+                <li data-i18n="job2Bullet1">使用 HTML 与 CSS 参与前端开发和界面实现。</li>
+                <li data-i18n="job2Bullet2">在初创团队中配合前端工作，参与产品运营。</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>      <section class="resume-section section-observer" id="skills" aria-labelledby="skills-title">
+        <header class="section-header">
+          <h2 id="skills-title" data-i18n="skillsTitle">技能</h2>
+        </header>
+        <div class="section-content skill-groups">
+          <div class="skill-group">
+            <h3 data-i18n="businessSystems">业务系统</h3>
+            <p data-i18n="businessSystemsList">OA 系统 · 工作流配置 · 数字化审批流程</p>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="development">开发</h3>
+            <p>Python · JavaScript · HTML · CSS · Flask</p>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="dataTools">数据与工具</h3>
+            <p>SQL · MySQL · Git · APIs · ECharts</p>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="professionalSkills">专业能力</h3>
+            <p data-i18n="professionalSkillsList">用户支持 · 需求梳理 · 文档编写 · 利益相关者沟通</p>
+          </div>
+        </div>
+      </section>      <section class="resume-section section-observer" id="education" aria-labelledby="education-title">
+        <header class="section-header">
+          <h2 id="education-title" data-i18n="educationTitle">教育经历</h2>
+        </header>
+        <div class="section-content education-list">
+          <article>
+            <time data-i18n="mastersDate">2026 年 8 月 — 至今</time>
+            <div>
+              <h3 data-i18n="mastersName">计算机科学硕士</h3>
+              <p data-i18n="mastersSchool">悉尼大学 · 澳大利亚悉尼</p>
+            </div>
+          </article>
+          <article>
+            <time data-i18n="bachelorsDate">2019 年 9 月 — 2023 年 7 月</time>
+            <div>
+              <h3 data-i18n="bachelorsName">计算机科学学士</h3>
+              <p data-i18n="bachelorsSchool">成都理工大学 & 牛津布鲁克斯大学</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p data-i18n="location">澳大利亚悉尼</p>
+      <p>© <span id="year"></span> <span data-i18n="profileName">胡娇</span></p>
+    </footer>
+  </body>
+</html>
+

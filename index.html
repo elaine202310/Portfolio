@@ -2,9 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- 在正文解析前处理旧链接和语言偏好；不隐藏正文，不等待外部脚本。 -->
+    <script>
+      (() => {
+        const url = new URL(location.href);
+        const explicit = url.searchParams.get("lang");
+        const current = document.documentElement.lang;
+        let preferred = current;
+        try {
+          if (current === "en") preferred = localStorage.getItem("preferred-language") || current;
+        } catch {}
+        const language = explicit === "en" || explicit === "zh-CN" ? explicit : preferred;
+        if (language === current) return;
+        const filename = url.pathname.split("/").pop() || "index.html";
+        const base = filename.replace(/\.zh\.html$/, ".html");
+        url.pathname = url.pathname.slice(0, url.pathname.lastIndexOf("/") + 1)
+          + (language === "zh-CN" ? base.replace(/\.html$/, ".zh.html") : base);
+        url.searchParams.set("lang", language);
+        location.replace(url.href);
+      })();
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Hu Jiao — computer science student working across practical software, business systems, and digital projects." />
-    <title>Hu Jiao — Computer Science &amp; Digital Projects</title>
+    <title>Hu Jiao — Home</title>
     <link rel="stylesheet" href="site.css" />
     <script src="site-content.js" defer></script>
     <script src="script.js" defer></script>
@@ -20,15 +41,15 @@
     <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
 
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Hu Jiao, home" data-i18n-aria="brandLabel">
+      <a class="brand" href="index.html?lang=en" aria-label="Hu Jiao, home" data-i18n-aria="brandLabel">
         <span data-i18n="profileName">Hu Jiao</span>
       </a>
 
       <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation" data-i18n-aria="navLabel">
-        <a href="index.html" data-page="home" data-i18n="navProfile">Home</a>
-        <a href="experience.html" data-page="experience" data-i18n="navExperience">Experience</a>
-        <a href="projects.html" data-page="projects" data-i18n="navProject">Projects</a>
-        <a href="photography.html" data-page="photography" data-i18n="navGallery">Photography</a>
+        <a href="index.html?lang=en" data-page="home" data-i18n="navProfile">Home</a>
+        <a href="experience.html?lang=en" data-page="experience" data-i18n="navExperience">Experience</a>
+        <a href="projects.html?lang=en" data-page="projects" data-i18n="navProject">Projects</a>
+        <a href="photography.html?lang=en" data-page="photography" data-i18n="navGallery">Photography</a>
       </nav>
 
       <div class="header-actions">
@@ -54,6 +75,24 @@
         <div class="contact-row">
           <a class="contact-button" href="mailto:jiaohu368@gmail.com"><span data-i18n="contactLabel">Get in touch</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
           <a class="plain-email" href="mailto:jiaohu368@gmail.com">jiaohu368@gmail.com</a>
+        </div>
+      </section>
+
+      <!-- 首页简短预览；完整内容保留在独立页面。 -->
+      <section class="home-story" aria-labelledby="home-work">
+        <h2 id="home-work" data-i18n="homeWorkTitle">Work & practice</h2>
+        <div class="home-story-copy">
+          <p data-i18n="homeWorkBody">Before returning to university, I spent three years working with business systems and workflows. Along the way, I also helped build and operate a Shopify store for an outdoor-living business.</p>
+          <a class="story-link" href="experience.html?lang=en"><span data-i18n="homeWorkLink">More about my experience</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+        </div>
+      </section>
+
+      <!-- 首页简短预览；完整内容保留在独立页面。 -->
+      <section class="home-story" aria-labelledby="home-life">
+        <h2 id="home-life" data-i18n="homeLifeTitle">Outside the screen</h2>
+        <div class="home-story-copy">
+          <p data-i18n="homeLifeBody">Photography and hiking are part of my life outside work and study. I helped photograph a New Year's Eve event, and I'd like to keep exploring natural, relaxed portraits.</p>
+          <a class="story-link" href="photography.html?lang=en"><span data-i18n="homeLifeLink">Photography notes</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
         </div>
       </section>
     </main>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <!-- 在正文解析前处理旧链接和语言偏好；不隐藏正文，不等待外部脚本。 -->
@@ -24,14 +24,14 @@
     </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Hu Jiao — computer science student working across practical software, business systems, and digital projects." />
-    <title>Hu Jiao — Photography</title>
+    <meta name="description" content="胡娇的双语个人网站：计算机科学、实用软件、业务系统与数字项目。" />
+    <title>胡娇 — 摄影</title>
     <link rel="stylesheet" href="site.css" />
     <script src="gallery-data.js" defer></script>
     <script src="site-content.js" defer></script>
     <script src="script.js" defer></script>
   </head>
-  <body data-page="photography">
+  <body class="is-zh" data-page="photography">
     <!--
       THESIS: A personal website, not a recruitment landing page.
       OWN-WORLD: Near-white, warm charcoal, restrained terracotta; Manrope and native Chinese type.
@@ -39,49 +39,49 @@
       FIRST VIEWPORT: A balanced reading column, modest name, personal subtitle, bio and contact.
       FORM: User-approved white preview, with subsequently approved copy and independent pages.
     -->
-    <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+    <a class="skip-link" href="#main" data-i18n="skip">跳到主要内容</a>
 
     <header class="site-header">
-      <a class="brand" href="index.html?lang=en" aria-label="Hu Jiao, home" data-i18n-aria="brandLabel">
-        <span data-i18n="profileName">Hu Jiao</span>
+      <a class="brand" href="index.zh.html?lang=zh-CN" aria-label="胡娇，首页" data-i18n-aria="brandLabel">
+        <span data-i18n="profileName">胡娇</span>
       </a>
 
-      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation" data-i18n-aria="navLabel">
-        <a href="index.html?lang=en" data-page="home" data-i18n="navProfile">Home</a>
-        <a href="experience.html?lang=en" data-page="experience" data-i18n="navExperience">Experience</a>
-        <a href="projects.html?lang=en" data-page="projects" data-i18n="navProject">Projects</a>
-        <a href="photography.html?lang=en" data-page="photography" data-i18n="navGallery">Photography</a>
+      <nav class="primary-nav" id="primary-nav" aria-label="主导航" data-i18n-aria="navLabel">
+        <a href="index.zh.html?lang=zh-CN" data-page="home" data-i18n="navProfile">首页</a>
+        <a href="experience.zh.html?lang=zh-CN" data-page="experience" data-i18n="navExperience">经历</a>
+        <a href="projects.zh.html?lang=zh-CN" data-page="projects" data-i18n="navProject">项目</a>
+        <a href="photography.zh.html?lang=zh-CN" data-page="photography" data-i18n="navGallery">摄影</a>
       </nav>
 
       <div class="header-actions">
-        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-i18n-aria="menuLabel" aria-label="Navigation menu">
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-i18n-aria="menuLabel" aria-label="导航菜单">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16" /></svg>
         </button>
-        <div class="language-switcher" role="group" aria-label="Language" data-i18n-aria="languageLabel">
-          <button type="button" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" data-lang="zh-CN" aria-pressed="false">中文</button>
+        <div class="language-switcher" role="group" aria-label="语言" data-i18n-aria="languageLabel">
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="zh-CN" aria-pressed="true">中文</button>
         </div>
-        <a class="header-email" href="mailto:jiaohu368@gmail.com" data-i18n="contactShort">Email</a>
+        <a class="header-email" href="mailto:jiaohu368@gmail.com" data-i18n="contactShort">邮件</a>
       </div>
     </header>
 
     <main id="main" class="page page-photography">
       <section class="resume-section section-observer" id="gallery" aria-labelledby="gallery-title">
         <header class="section-header">
-          <h1 id="gallery-title" data-i18n="galleryTitle">Photography</h1>
+          <h1 id="gallery-title" data-i18n="galleryTitle">摄影记录</h1>
         </header>
         <div class="section-content gallery-content">
-          <p class="gallery-intro" data-i18n="galleryIntro">Outside work and study, I enjoy photography and hiking. I helped photograph a New Year’s Eve event, and I’m interested in trying relaxed, natural portrait photography.</p>
+          <p class="gallery-intro" data-i18n="galleryIntro">工作和学习之外，我喜欢摄影与徒步。我曾参与一次跨年活动的现场摄影，也想继续尝试轻松、自然的人像拍摄。</p>
           <div class="gallery-albums" id="gallery-grid"></div>
         </div>
       </section>
     </main>
     <footer class="site-footer">
-      <p data-i18n="location">Sydney, Australia</p>
-      <p>© <span id="year"></span> <span data-i18n="profileName">Hu Jiao</span></p>
+      <p data-i18n="location">澳大利亚悉尼</p>
+      <p>© <span id="year"></span> <span data-i18n="profileName">胡娇</span></p>
     </footer>
     <dialog class="lightbox" id="gallery-lightbox" aria-labelledby="lightbox-title">
-      <button class="lightbox-close" type="button" data-i18n-aria="closePreview" aria-label="Close preview">
+      <button class="lightbox-close" type="button" data-i18n-aria="closePreview" aria-label="关闭预览">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
       </button>
       <div class="lightbox-visual" id="lightbox-visual"></div>
@@ -92,3 +92,4 @@
     </dialog>
   </body>
 </html>
+

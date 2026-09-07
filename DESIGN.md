@@ -2,8 +2,8 @@
 name: "Hu Jiao Personal Website"
 description: "A restrained bilingual personal website with near-white paper, warm charcoal, and terracotta."
 colors:
-  paper: "#fdfcfa"
-  ink: "#302d29"
+  paper: "#f9f8f6"
+  ink: "#222222"
   muted: "#69635e"
   accent: "#a64f38"
   line: "#dedad5"
@@ -78,7 +78,7 @@ Headings use restrained weight and tight English tracking. Chinese headings rese
 
 ## Layout
 
-The shared header and footer have a 1240px maximum width. Main pages have a 1060px maximum; Home narrows to 820px. Desktop page padding is 76px above and 88px below; Home uses 90px and 96px.
+The shared header and footer have a 1240px maximum width. Inner pages have a 1060px maximum; Home uses 1240px with a left-aligned introduction capped at 760px. Home continues into two unboxed story rows, separated by fine rules. Desktop rows use two columns and 60px vertical padding; mobile rows stack. English and Chinese each have static HTML pages so navigation does not flash the wrong language.
 
 At 1320px the outer header/footer margin becomes 32px. At 900px navigation becomes a toggled two-column menu, content uses 32px side gutters, and page top padding becomes 56px. At 600px, gutters become 20px and page padding becomes 44px above and 56px below. Experience, education, skills, projects, and photographs collapse to one column.
 

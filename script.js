@@ -181,17 +181,25 @@ lightbox?.addEventListener("click", (event) => {
   if (event.target === lightbox) lightbox.close();
 });
 
-buttons.forEach((button) => button.addEventListener("click", () => setLanguage(button.dataset.lang)));
+// 两种语言各有静态页面，切换直接进入对应页面，不再先画英文再替换。
+buttons.forEach((button) => button.addEventListener("click", () => {
+  const language = button.dataset.lang;
+  try { localStorage.setItem("preferred-language", language); } catch {}
+  const url = new URL(location.href);
+  const filename = url.pathname.split("/").pop() || "index.html";
+  const base = filename.replace(/\.zh\.html$/, ".html");
+  url.pathname = url.pathname.slice(0, url.pathname.lastIndexOf("/") + 1)
+    + (language === "zh-CN" ? base.replace(/\.html$/, ".zh.html") : base);
+  url.searchParams.set("lang", language);
+  location.assign(url.href);
+}));
 mobileMenuToggle.addEventListener("click", () => setMobileMenu(mobileMenuToggle.getAttribute("aria-expanded") !== "true"));
 primaryNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMobileMenu(false)));
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") setMobileMenu(false);
 });
 
-let preferred = new URLSearchParams(location.search).get("lang");
-try { preferred ||= localStorage.getItem("preferred-language"); } catch {}
-const browserLanguage = navigator.language.toLowerCase().startsWith("zh") ? "zh-CN" : "en";
-setLanguage(preferred || browserLanguage);
+setLanguage(document.documentElement.lang);
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
