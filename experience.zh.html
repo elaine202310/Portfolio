@@ -8,11 +8,8 @@
         const url = new URL(location.href);
         const explicit = url.searchParams.get("lang");
         const current = document.documentElement.lang;
-        let preferred = current;
-        try {
-          if (current === "en") preferred = localStorage.getItem("preferred-language") || current;
-        } catch {}
-        const language = explicit === "en" || explicit === "zh-CN" ? explicit : preferred;
+        // 主地址默认英文；明确的中文页面或语言参数保留中文。
+        const language = explicit === "en" || explicit === "zh-CN" ? explicit : current;
         if (language === current) return;
         const filename = url.pathname.split("/").pop() || "index.html";
         const base = filename.replace(/\.zh\.html$/, ".html");
@@ -152,4 +149,3 @@
     </footer>
   </body>
 </html>
-
