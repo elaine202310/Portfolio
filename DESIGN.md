@@ -1,200 +1,119 @@
 ---
-name: "Hu Jiao Personal Profile"
-description: "A calm bilingual editorial profile built from white paper, graphite type, cobalt actions, and hairline structure."
+name: "Hu Jiao Personal Website"
+description: "A restrained bilingual personal website with near-white paper, warm charcoal, and terracotta."
 colors:
-  graphite: "#151515"
-  muted-slate: "#656a73"
-  rule: "#dfe2e8"
-  rule-strong: "#c9cdd5"
-  paper: "#ffffff"
-  soft-panel: "#f5f7fb"
-  cobalt: "#174bd6"
-  cobalt-dark: "#123ca9"
-  cobalt-tint: "#edf2ff"
-  focus-amber: "#ffbf47"
+  paper: "#fdfcfa"
+  ink: "#302d29"
+  muted: "#69635e"
+  accent: "#a64f38"
+  line: "#dedad5"
+  soft: "#f5f3f0"
 typography:
   display:
-    fontFamily: '"Manrope Profile", "Noto Sans SC Profile", sans-serif'
-    fontSize: "clamp(2.45rem, 5.3vw, 5rem)"
-    fontWeight: 680
-    lineHeight: 1.04
-    letterSpacing: "-0.04em"
+    fontFamily: "Manrope, PingFang SC, Microsoft YaHei, sans-serif"
+    fontSize: "clamp(2.6rem, 5vw, 3.6rem)"
+    fontWeight: 550
+    lineHeight: 1.25
+    letterSpacing: "-0.025em"
   headline:
-    fontFamily: '"Manrope Profile", "Noto Sans SC Profile", sans-serif'
-    fontSize: "clamp(2rem, 3.5vw, 3.4rem)"
-    lineHeight: 1.08
-    letterSpacing: "-0.035em"
-  title:
-    fontFamily: '"Manrope Profile", "Noto Sans SC Profile", sans-serif'
-    fontSize: "1.14rem"
-    lineHeight: 1.4
-    letterSpacing: "-0.015em"
+    fontFamily: "Manrope, PingFang SC, Microsoft YaHei, sans-serif"
+    fontSize: "1.65rem"
+    fontWeight: 550
+    lineHeight: 1.25
   body:
-    fontFamily: '"Manrope Profile", "Noto Sans SC Profile", sans-serif'
-    fontSize: "1rem"
-    fontWeight: 400
-    lineHeight: 1.65
-  label:
-    fontFamily: '"Manrope Profile", "Noto Sans SC Profile", sans-serif'
-    fontSize: "0.74rem"
-    fontWeight: 720
-    lineHeight: 1.65
-    letterSpacing: "0.08em"
+    fontFamily: "Manrope, PingFang SC, Microsoft YaHei, sans-serif"
+    fontSize: "16px"
+    lineHeight: 1.75
+  intro:
+    fontSize: "19px"
+    lineHeight: 1.8
 rounded:
-  action: "0.25rem"
-  pill: "999px"
+  control: "4px"
 spacing:
-  page: "clamp(1.25rem, 3vw, 3rem)"
-  section-y: "clamp(3rem, 6vw, 5.5rem)"
-  content-x: "clamp(2rem, 8vw, 9rem)"
+  small: "16px"
+  medium: "24px"
+  large: "32px"
 components:
   button-primary:
-    backgroundColor: "{colors.cobalt}"
-    textColor: "{colors.paper}"
-    rounded: "{rounded.action}"
-    padding: "0.85rem 1rem"
-  button-primary-hover:
-    backgroundColor: "{colors.cobalt-dark}"
-    textColor: "{colors.paper}"
-    rounded: "{rounded.action}"
-    padding: "0.85rem 1rem"
-  chip-outline:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.graphite}"
-    rounded: "{rounded.pill}"
-    padding: "0.35rem 0.65rem"
+    backgroundColor: "{colors.accent}"
+    textColor: "white"
+    rounded: "{rounded.control}"
+    padding: "12px 21px"
+  button-outline:
+    textColor: "{colors.accent}"
+    rounded: "{rounded.control}"
+    padding: "7px 16px"
 ---
 
-# Design System: Hu Jiao Personal Profile
+# Design System: Hu Jiao Personal Website
 
 ## Overview
 
-**Creative North Star: "The Editorial Dossier"**
+**Creative North Star: "A Quiet Personal Space"**
 
-The site presents Hu Jiao as a person and practitioner through the quiet authority of a beautifully typeset professional dossier. White paper, graphite typography, a restrained cobalt accent, and exact hairline rules make the experience calm, credible, and easy to scan rather than promotional or job-board-like.
+A restrained personal website that introduces Hu Jiao and makes room for work, independent projects, and photography. Near-white paper, warm charcoal type, and occasional terracotta actions keep the presentation approachable and clear.
 
-The system is spacious but information-dense where a résumé needs precision. Its identity comes from the asymmetric profile composition, bilingual typography, and disciplined structural lines—not photography, illustration, ornamental effects, or technological decoration.
+The implemented source of visual truth is `site.css`. Four independent pages share this system: Home (`index.html`), Experience, Projects, and Photography. The approved home subtitle is “Exploring ideas. Making things.” Preserve the exact approved bilingual biography in `site-content.js`.
 
 **Key Characteristics:**
 
-- Personal thesis and biography lead on the left; localized name and concise facts occupy the Composition B rail on the right.
-- Restrained cobalt is reserved for navigation state, labels, and primary contact actions.
-- Self-hosted Manrope and Noto Sans SC, with exactly one language-specific name shown at a time.
-- Flat white and cool-gray surfaces separated by one-pixel hairlines.
-- Responsive editorial grids that collapse into a linear reading flow.
-- No shipping imagery; the approved composition is an internal reference only.
+- A modest name, personal subtitle, and readable biography lead Home.
+- Four native page links replace the former scrolling dossier.
+- Self-hosted Manrope pairs with native Chinese fonts.
+- Flat surfaces and hairline rules organize information.
+- Missing photographs produce a text empty state, without placeholder images.
+- Motion stays brief and respects reduced-motion preferences.
 
 ## Colors
 
-The palette is quiet and cool: graphite and slate carry the content, paper and pale blue-gray establish surfaces, and cobalt appears sparingly as the sole brand accent.
+Terracotta is the primary accent for contact, active navigation, and focus. Warm charcoal carries primary text; muted text remains readable against paper and the soft project-status panel. Hairline rules use the line token.
 
-### Primary
-
-- **Professional Cobalt** (`#174bd6`): Current navigation, section labels, selections, active language state, and primary email actions.
-- **Deep Cobalt** (`#123ca9`): Hover state for cobalt actions and email links.
-- **Cobalt Wash** (`#edf2ff`): The contact section's calm tonal field.
-
-### Neutral
-
-- **Graphite Ink** (`#151515`): Primary copy and the skip-link ground.
-- **Muted Slate** (`#656a73`): Metadata, secondary identity copy, dates, and footer text.
-- **Paper White** (`#ffffff`): Main page ground and action text.
-- **Soft Panel** (`#f5f7fb`): Facts rail and language-switcher track.
-- **Cool Rule** (`#dfe2e8`): Default one-pixel dividers.
-- **Strong Rule** (`#c9cdd5`): Outlined controls and technology chips.
-- **Focus Amber** (`#ffbf47`): High-visibility keyboard focus outline only.
-
-**The One Accent Rule.** Cobalt is the only expressive hue and stays concentrated in state, navigation, and contact affordances; broad content fields remain quiet.
+Selection uses a warm pale wash (`#edd9cf`) with ink text. Contact hover deepens to `#853d2b`; the scrollbar thumb uses `#b5aaa2`. These are state-specific values in `site.css`.
 
 ## Typography
 
-**Display Font:** Manrope Profile (with Noto Sans SC Profile and `sans-serif` fallback)  
-**Body Font:** Manrope Profile (with Noto Sans SC Profile and `sans-serif` fallback)  
-**Chinese Font:** Noto Sans SC Profile (with Manrope Profile and `sans-serif` fallback)
+English uses the local Manrope variable font (400–800, swap). Chinese prioritizes PingFang SC, then Microsoft YaHei, then Manrope and sans-serif; the page does not load a Chinese webfont.
 
-**Character:** The variable sans-serif pairing is precise, contemporary, and neutral enough to let experience and education lead. The restrained rail identity is localized rather than duplicated: English shows “Hu Jiao,” while Simplified Chinese shows “胡娇” with Noto Sans SC first in the stack. Chinese hero copy receives a dedicated sizing and measure override.
-
-### Hierarchy
-
-- **Display Thesis** (680, `clamp(2.45rem, 5.3vw, 5rem)`, 1.04): The personal thesis leading the left field, capped at 16ch. Chinese uses `clamp(2.3rem, 4.2vw, 4rem)`, 1.12, and 18ch.
-- **Identity Name** (720, `clamp(1.65rem, 2.6vw, 2.4rem)`, 1.1): The active language's name in the right facts rail.
-- **Headline** (`clamp(2rem, 3.5vw, 3.4rem)`, 1.08): Major résumé and contact section headings.
-- **Title** (`1.14rem`, 1.4): Roles, project names, and education credentials.
-- **Body** (400, `1rem`, 1.65): General copy; introductions and descriptions stay near 60–68ch.
-- **Label** (720, `0.74rem`, `0.08em`, uppercase): English section eyebrows. Do not mechanically force uppercase styling onto Chinese content.
-
-**The Bilingual Measure Rule.** Treat Chinese as authored typography: switch the family order, preserve natural spacing, and adjust measure and display scale instead of inserting translations into English metrics unchanged.
+Headings use restrained weight and tight English tracking. Chinese headings reset tracking to zero, and Chinese body leading becomes 1.9. The subtitle scales from 1.4rem to 2rem, with a 23px mobile value. Home biography uses a 68ch maximum measure and becomes 17px on mobile. Date metadata uses tabular numerals.
 
 ## Layout
 
-The page is capped at 100rem and uses a fluid page inset of `clamp(1.25rem, 3vw, 3rem)`. The sticky 4.5rem header is a three-part grid: identity, centered section navigation, and language/contact actions. The first viewport pairs a wide left introduction—section label, personal thesis, biography, and email action—with a 29% right rail containing the localized name and facts. Résumé sections use a 24% labeled rail and a broad content column.
+The shared header and footer have a 1240px maximum width. Main pages have a 1060px maximum; Home narrows to 820px. Desktop page padding is 76px above and 88px below; Home uses 90px and 96px.
 
-Dates and details align in two-column chronology grids, while skills form a ruled two-by-two matrix. At 72rem, grids tighten and the email shortcut disappears. At 52rem, primary navigation hides, the hero becomes a vertical reading flow, the facts rail moves below the thesis, and section rails stack above content. At 35rem, chronology, education, project, and skills grids become single-column. The header remains compact and the language switch stays available throughout.
+At 1320px the outer header/footer margin becomes 32px. At 900px navigation becomes a toggled two-column menu, content uses 32px side gutters, and page top padding becomes 56px. At 600px, gutters become 20px and page padding becomes 44px above and 56px below. Experience, education, skills, projects, and photographs collapse to one column.
+
+The site uses normal document scrolling. There is no scroll snapping, pinned full-screen section, or scroll interception.
 
 ## Elevation & Depth
 
-The system uses no box shadows. Depth comes from tonal layering—the soft facts rail and cobalt-tinted contact field—plus one-pixel cool-gray rules that establish hierarchy without making content feel card-like.
-
-**The Flat Dossier Rule.** Surfaces remain flat at rest; use tone and hairline structure, never floating cards or ambient shadow, to separate information.
+Surfaces are flat, with no shadows. Spacing and one-pixel rules separate sections; a soft neutral panel holds the project status. The photograph dialog uses a dark translucent backdrop.
 
 ## Shapes
 
-Most containers are square and structural. The only small corner radius is `0.25rem` on primary email actions, while `999px` pills are reserved for the segmented language control and technology tags. One-pixel borders carry most grouping; avoid introducing rounded card shells around résumé content.
+Email controls have small 4px corners. Content remains open and rectangular, without raised cards. Supplied photographs use a 4:3 cropped preview; their enlarged view uses contain sizing.
 
 ## Components
 
-### Hero Introduction
+Navigation uses native links and marks the active route with terracotta text, a short underline, and `aria-current="page"`. The mobile toggle is a 44px control; the expanded menu retains the four page destinations.
 
-- **Hierarchy:** Section label, personal thesis, two-part biography, then email action in the left field.
-- **Measure:** Thesis stays within 16ch and biography within 68ch. Chinese thesis expands to 18ch and uses the localized `clamp(2.3rem, 4.2vw, 4rem)` size.
-- **Alignment:** Left-aligned throughout, balanced by the separate facts rail.
+Language controls are plain EN / 中文 buttons with an underlined active choice and `aria-pressed`. The selection is retained through local storage and language query parameters on page-navigation links.
 
-### Primary Email Actions
+The primary email action pairs a terracotta fill with white text and an authored arrow. Its hover moves upward 2px. The header has a compact outlined email link, hidden below 600px. Focus uses a 2px accent outline with 5px offset.
 
-- **Shape:** Compact rectangle with `0.25rem` corners and an inline arrow.
-- **Primary:** Cobalt ground, white text, semibold weight, and `0.85rem 1rem` or `0.9rem 1.1rem` padding.
-- **Hover / Focus:** Ground shifts to Deep Cobalt in 180ms; the arrow nudges horizontally over 380ms. Global focus is a 3px Focus Amber outline with 4px offset.
+Experience uses a date column and a content column; skills form two columns on desktop. Projects presents the supplied Shopify case as text, deliverables, and an honest status note. Do not invent screenshots or results.
 
-### Language Switcher
+Photography reads bilingual albums from `gallery-data.js`. Only successfully loaded supplied images become interactive previews. Albums without loaded photos display “Photographs will be added soon.” / “照片待更新。” The native dialog enlarges actual photographs and supports closing.
 
-- **Style:** Soft Panel pill with a 1px Strong Rule border and 2px inset padding.
-- **State:** Each option is at least 2.75rem tall; the active language fills with Professional Cobalt and white text, while inactive text is muted gray.
-
-### Technology Chips
-
-- **Style:** Transparent/paper pills with a 1px Strong Rule outline, `0.35rem 0.65rem` padding, and `0.76rem` type.
-- **State:** Informational only; they do not imply an interactive filter.
-
-### Navigation
-
-- **Style:** Sticky paper header with a slightly translucent white ground and bottom rule. Links are compact semibold text.
-- **State:** Hover and current-section text turn cobalt; the current item gains a 3px cobalt underline animated from the left over 240ms. Desktop navigation hides below 52rem rather than compressing into an unreadable row.
-
-### Facts Rail
-
-- **Style:** Soft Panel ground, left hairline on desktop, restrained localized identity heading, and definition-list rows separated by rules.
-- **Responsive:** Moves below the thesis at tablet widths; low-priority facts are hidden to keep the compact presentation focused.
-
-### Résumé Sections
-
-- **Style:** A narrow labeled rail and broad detail field, separated by a hairline. Chronologies use aligned tabular dates; related entries are separated by horizontal rules rather than cards.
+The page has one short entrance (420ms, opacity 0.7 to 1, vertical movement 8px), a 180ms cross-document view transition where supported, and small interaction transitions. The easing is `cubic-bezier(.16,1,.3,1)`. Reduced-motion preferences disable animation, transitions, and smooth scrolling.
 
 ## Do's and Don'ts
 
-### Do:
-
-- **Do** keep the personal thesis and biography on the left and the localized name with facts in the right rail.
-- **Do** reserve cobalt for meaningful emphasis and interaction state.
-- **Do** use generous whitespace, 60–68ch text measures, and tabular dates for scanning.
-- **Do** preserve natural English and Simplified Chinese typography as equal first-class layouts.
-- **Do** use one-pixel rules and tonal panels to organize résumé information.
-- **Do** keep all interactions keyboard-visible and respect reduced-motion preferences.
-
-### Don't:
-
-- **Don't** introduce gradients, heavy shadows, decorative tech motifs, or floating card grids.
-- **Don't** show English and Chinese names simultaneously; render only the active language's restrained rail identity.
-- **Don't** add portraits, logos, stock photography, or other shipping imagery without supplied and approved source material.
-- **Don't** spread cobalt across large content areas or add competing accent hues.
-- **Don't** force Chinese copy into English tracking, casing, or line-length assumptions.
-- **Don't** fabricate contact channels, testimonials, metrics, or credentials.
+- Do preserve the approved home subtitle and bilingual biography.
+- Do maintain all four independent pages and native navigation.
+- Do use near-white paper, warm charcoal, and restrained terracotta.
+- Do keep English and Chinese typography equally readable.
+- Do use supplied facts and photographs only.
+- Do preserve visible keyboard focus and reduced-motion support.
+- Don't restore cobalt, the old profile rail, or scrolling section navigation.
+- Don't add image placeholders, fabricated work, or invented metrics.
+- Don't introduce scroll snapping, large motion, shadows, or decorative cards.

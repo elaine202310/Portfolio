@@ -6,10 +6,11 @@
     <meta name="description" content="Hu Jiao — computer science student working across practical software, business systems, and digital projects." />
     <title>Hu Jiao — Computer Science &amp; Digital Projects</title>
     <link rel="stylesheet" href="site.css" />
+    <script src="gallery-data.js" defer></script>
     <script src="site-content.js" defer></script>
     <script src="script.js" defer></script>
   </head>
-  <body data-page="home">
+  <body data-page="photography">
     <!--
       THESIS: A personal website, not a recruitment landing page.
       OWN-WORLD: Near-white, warm charcoal, restrained terracotta; Manrope and native Chinese type.
@@ -43,17 +44,14 @@
       </div>
     </header>
 
-    <main id="main" class="page page-home">
-      <section class="home-intro" aria-labelledby="profile-title">
-        <h1 id="profile-title" data-i18n="profileName">Hu Jiao</h1>
-        <p class="hero-subtitle" data-i18n="heroTitle">Exploring ideas. Making things.</p>
-        <div class="intro-copy">
-          <p data-i18n="heroBody1">I'm a Master of Computer Science student at the University of Sydney. I enjoy exploring across disciplines and bringing ideas to life with technology and AI.</p>
-          <p data-i18n="heroBody2">This is a space for my work, independent projects, and photography.</p>
-        </div>
-        <div class="contact-row">
-          <a class="contact-button" href="mailto:jiaohu368@gmail.com"><span data-i18n="contactLabel">Get in touch</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
-          <a class="plain-email" href="mailto:jiaohu368@gmail.com">jiaohu368@gmail.com</a>
+    <main id="main" class="page page-photography">
+      <section class="resume-section section-observer" id="gallery" aria-labelledby="gallery-title">
+        <header class="section-header">
+          <h1 id="gallery-title" data-i18n="galleryTitle">Photography</h1>
+        </header>
+        <div class="section-content gallery-content">
+          <p class="gallery-intro" data-i18n="galleryIntro">Outside work and study, I enjoy photography and hiking. I helped photograph a New Year’s Eve event, and I’m interested in trying relaxed, natural portrait photography.</p>
+          <div class="gallery-albums" id="gallery-grid"></div>
         </div>
       </section>
     </main>
@@ -61,5 +59,15 @@
       <p data-i18n="location">Sydney, Australia</p>
       <p>© <span id="year"></span> <span data-i18n="profileName">Hu Jiao</span></p>
     </footer>
+    <dialog class="lightbox" id="gallery-lightbox" aria-labelledby="lightbox-title">
+      <button class="lightbox-close" type="button" data-i18n-aria="closePreview" aria-label="Close preview">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+      </button>
+      <div class="lightbox-visual" id="lightbox-visual"></div>
+      <div class="lightbox-copy">
+        <p class="gallery-badge" id="lightbox-badge"></p>
+        <h2 id="lightbox-title"></h2>
+      </div>
+    </dialog>
   </body>
 </html>

@@ -1,0 +1,133 @@
+/* 公共样式：四个独立页面共享。近白底 + 陶土色；不使用滚动吸附。 */
+@font-face { font-family: Manrope; src: url('assets/fonts/Manrope-Variable.ttf') format('truetype'); font-weight: 400 800; font-display: swap; }
+:root { --paper: #fdfcfa; --ink: #302d29; --muted: #69635e; --accent: #a64f38; --line: #dedad5; --soft: #f5f3f0; --ease: cubic-bezier(.16,1,.3,1); }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scrollbar-color: #b5aaa2 var(--paper); }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.75 Manrope,'PingFang SC','Microsoft YaHei',sans-serif; }
+body.is-zh { font-family: 'PingFang SC','Microsoft YaHei',Manrope,sans-serif; line-height: 1.9; }
+::selection { background: #edd9cf; color: var(--ink); }
+a { color: inherit; text-underline-offset: 5px; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+h1,h2,h3,h4,p { margin: 0; }
+h1,h2,h3 { font-weight: 550; letter-spacing: -.025em; line-height: 1.25; text-wrap: balance; }
+h1 { font-size: clamp(2.6rem,5vw,3.6rem); }
+h2 { font-size: 1.65rem; }
+h3 { font-size: 1.35rem; }
+.is-zh h1,.is-zh h2,.is-zh h3 { letter-spacing: 0; }
+.skip-link { position: absolute; top: -100px; left: 20px; padding: 12px; background: var(--ink); color: white; z-index: 20; }
+.skip-link:focus { top: 10px; }
+/* 导航与语言 */
+.site-header { max-width: 1240px; margin: auto; min-height: 102px; padding: 20px 0; display: flex; align-items: center; gap: 32px; border-bottom: 1px solid var(--line); }
+.brand { font-size: 26px; font-weight: 600; text-decoration: none; margin-right: auto; white-space: nowrap; }
+.primary-nav { display: flex; gap: 26px; }
+.primary-nav a { position: relative; display: block; padding: 10px 0; text-decoration: none; }
+.primary-nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 220ms var(--ease); }
+.primary-nav a:hover::after,.primary-nav a[aria-current]::after { transform: scaleX(1); }
+.primary-nav a[aria-current],.primary-nav a:hover { color: var(--accent); }
+.header-actions { display: flex; align-items: center; gap: 22px; }
+.language-switcher { display: flex; align-items: center; gap: 3px; }
+.language-switcher button { border: 0; background: none; min-height: 44px; min-width: 38px; padding: 4px; color: var(--muted); }
+.language-switcher button[aria-pressed=true] { color: var(--ink); text-decoration: underline; text-underline-offset: 6px; }
+.header-email { border: 1px solid var(--accent); color: var(--accent); padding: 7px 16px; text-decoration: none; border-radius: 4px; }
+.mobile-menu-toggle { display: none; border: 0; background: none; width: 44px; height: 44px; align-items: center; justify-content: center; }
+/* 首页：介绍为主，不重复导航，不摆空白作品卡。 */
+.page { max-width: 1060px; margin: 0 auto; padding: 76px 0 88px; animation: arrive 420ms var(--ease) both; }
+.page-home { max-width: 820px; padding: 90px 0 96px; }
+.home-intro h1 { margin-bottom: 16px; }
+.hero-subtitle { font-size: clamp(1.4rem,3vw,2rem); line-height: 1.4; letter-spacing: -.02em; }
+.intro-copy { margin-top: 32px; font-size: 19px; line-height: 1.8; max-width: 68ch; }
+.intro-copy p + p { margin-top: 22px; }
+.contact-row { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-top: 36px; }
+.contact-button { display: inline-flex; align-items: center; justify-content: center; gap: 14px; padding: 12px 21px; border-radius: 4px; background: var(--accent); color: white; text-decoration: none; transition: background 180ms,transform 220ms var(--ease); }
+.contact-button:hover { background: #853d2b; transform: translateY(-2px); }
+.plain-email { text-decoration: none; overflow-wrap: anywhere; }
+.plain-email:hover { color: var(--accent); text-decoration: underline; }
+.site-footer { max-width: 1240px; margin: auto; border-top: 1px solid var(--line); padding: 24px 0 32px; display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 13px; }
+/* 经历：职责、技能、教育分开编排。 */
+.section-header { margin-bottom: 42px; }
+.resume-section + .resume-section { border-top: 1px solid var(--line); margin-top: 64px; padding-top: 40px; }
+.timeline-item { display: grid; grid-template-columns: 165px 1fr; gap: 38px; }
+.timeline-item + .timeline-item { margin-top: 44px; padding-top: 36px; border-top: 1px solid var(--line); }
+.timeline-meta { display: flex; flex-direction: column; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+.organization { color: var(--muted); margin-top: 8px; }
+.timeline-main ul,.project-deliverables ul { padding-left: 20px; margin: 20px 0 0; }
+li + li { margin-top: 10px; }
+li::marker { color: var(--muted); }
+.skill-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 56px; }
+.skill-group h3 { font-size: 17px; margin-bottom: 8px; }
+.skill-group p { color: var(--muted); }
+.education-list article { display: grid; grid-template-columns: 165px 1fr; gap: 38px; }
+.education-list article + article { margin-top: 28px; }
+.education-list time { color: var(--muted); font-size: 14px; }
+.education-list p { color: var(--muted); margin-top: 8px; }
+/* 项目：纯文字短案例，说明项目边界。 */
+.project-case-card { display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px 56px; }
+.project-heading h3 { font-size: clamp(1.7rem,3vw,2.4rem); }
+.project-subtitle { margin-top: 16px; }
+.project-meta { color: var(--muted); font-size: 14px; margin-top: 8px; }
+.project-case-summary { padding-top: 4px; }
+.tech-list { display: flex; flex-wrap: wrap; gap: 6px 18px; list-style: none; padding: 0; margin-top: 24px; color: var(--muted); font-size: 13px; }
+.tech-list li + li { margin-top: 0; }
+.project-deliverables { grid-column: 1 / -1; padding: 32px 0; border-top: 1px solid var(--line); }
+.project-deliverables h4 { font-size: 18px; font-weight: 550; }
+.project-status { grid-column: 1 / -1; color: var(--muted); background: var(--soft); padding: 22px 26px; }
+/* 摄影：gallery-data.js 管理专题；缺失照片不生成假图。 */
+.gallery-intro { max-width: 65ch; font-size: 18px; margin-bottom: 48px; }
+.gallery-album + .gallery-album { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+.gallery-album-description { color: var(--muted); margin-top: 10px; margin-bottom: 24px; }
+.gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.gallery-empty { color: var(--muted); grid-column: 1 / -1; padding: 24px 0; border-block: 1px solid var(--line); font-size: 14px; }
+.gallery-preview { display: block; padding: 0; border: 0; background: none; width: 100%; overflow: hidden; }
+.gallery-media { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 350ms var(--ease); }
+.gallery-preview:hover .gallery-media { transform: scale(1.025); }
+.gallery-caption { margin-top: 12px; font-size: 14px; color: var(--muted); }
+.lightbox { width: min(1000px,94vw); max-height: 92dvh; padding: 48px 24px 24px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); }
+.lightbox::backdrop { background: rgb(30 27 24 / .78); }
+body:has(dialog[open]) { overflow: hidden; }
+.lightbox-close { position: absolute; right: 8px; top: 4px; width: 44px; height: 44px; border: 0; background: transparent; }
+.lightbox-media { display: block; width: 100%; max-height: 65dvh; object-fit: contain; }
+.lightbox-copy { margin-top: 16px; }
+.lightbox-copy h2 { font-size: 18px; }
+.gallery-badge { font-size: 13px; color: var(--muted); }
+/* 轻盈感来自一次短过渡，不阻止滚动或点击。 */
+@keyframes arrive { from { opacity: .7; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@view-transition { navigation: auto; }
+::view-transition-old(root),::view-transition-new(root) { animation-duration: 180ms; }
+@media (max-width: 1320px) {
+  .site-header,.site-footer { margin-inline: 32px; }
+  .page { margin-inline: auto; width: calc(100% - 96px); }
+}
+@media (max-width: 900px) {
+  .site-header { position: relative; flex-wrap: wrap; gap: 12px; min-height: 84px; }
+  .mobile-menu-toggle { display: inline-flex; }
+  .primary-nav { display: none; order: 3; width: 100%; padding-top: 12px; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
+  .primary-nav.is-open { display: grid; }
+  .header-actions { gap: 10px; }
+  .page { width: calc(100% - 64px); padding-top: 56px; }
+  .page-home { max-width: 680px; }
+  .project-case-card { gap: 28px; }
+}
+@media (max-width: 600px) {
+  .site-header,.site-footer { margin-inline: 20px; }
+  .brand { font-size: 22px; }
+  .header-email { display: none; }
+  .header-actions { gap: 3px; }
+  .page { width: calc(100% - 40px); padding: 44px 0 56px; }
+  .hero-subtitle { font-size: 23px; }
+  .intro-copy { font-size: 17px; margin-top: 26px; }
+  .contact-row { gap: 18px; align-items: flex-start; flex-direction: column; }
+  .section-header { margin-bottom: 30px; }
+  .timeline-item,.education-list article,.project-case-card,.skill-groups,.gallery-grid { grid-template-columns: 1fr; gap: 18px; }
+  .timeline-meta { flex-direction: row; gap: 16px; flex-wrap: wrap; }
+  .resume-section + .resume-section { margin-top: 44px; padding-top: 30px; }
+  .project-deliverables { padding: 24px 0; }
+  .gallery-intro { font-size: 17px; }
+  .site-footer { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,*::before,*::after { animation: none !important; transition: none !important; }
+  ::view-transition-old(root),::view-transition-new(root) { animation: none; }
+}

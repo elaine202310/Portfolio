@@ -6,10 +6,11 @@
     <meta name="description" content="Hu Jiao — computer science student working across practical software, business systems, and digital projects." />
     <title>Hu Jiao — Computer Science &amp; Digital Projects</title>
     <link rel="stylesheet" href="site.css" />
+    <script src="portfolio-data.js" defer></script>
     <script src="site-content.js" defer></script>
     <script src="script.js" defer></script>
   </head>
-  <body data-page="home">
+  <body data-page="projects">
     <!--
       THESIS: A personal website, not a recruitment landing page.
       OWN-WORLD: Near-white, warm charcoal, restrained terracotta; Manrope and native Chinese type.
@@ -43,18 +44,12 @@
       </div>
     </header>
 
-    <main id="main" class="page page-home">
-      <section class="home-intro" aria-labelledby="profile-title">
-        <h1 id="profile-title" data-i18n="profileName">Hu Jiao</h1>
-        <p class="hero-subtitle" data-i18n="heroTitle">Exploring ideas. Making things.</p>
-        <div class="intro-copy">
-          <p data-i18n="heroBody1">I'm a Master of Computer Science student at the University of Sydney. I enjoy exploring across disciplines and bringing ideas to life with technology and AI.</p>
-          <p data-i18n="heroBody2">This is a space for my work, independent projects, and photography.</p>
-        </div>
-        <div class="contact-row">
-          <a class="contact-button" href="mailto:jiaohu368@gmail.com"><span data-i18n="contactLabel">Get in touch</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
-          <a class="plain-email" href="mailto:jiaohu368@gmail.com">jiaohu368@gmail.com</a>
-        </div>
+    <main id="main" class="page page-projects">
+      <section class="resume-section section-observer" id="project" aria-labelledby="project-title">
+        <header class="section-header">
+          <h1 id="project-title" data-i18n="projectTitle">Projects</h1>
+        </header>
+        <div class="section-content portfolio-list" id="portfolio-list" aria-live="polite"></div>
       </section>
     </main>
     <footer class="site-footer">
