@@ -78,7 +78,7 @@ Headings use restrained weight and tight English tracking. Chinese headings rese
 
 ## Layout
 
-The shared header and footer have a 1240px maximum width. Inner pages have a 1060px maximum; Home uses 1240px with a left-aligned introduction capped at 760px. Home continues into two unboxed story rows, separated by fine rules. Desktop rows use two columns and 60px vertical padding; mobile rows stack. English and Chinese each have static HTML pages so navigation does not flash the wrong language.
+The shared header and footer have a 1240px maximum width. Inner pages have a 1060px maximum. Home uses an 820px centered column with left-aligned text, 90px top padding and 96px bottom padding on desktop. The introduction leads directly to the footer, following the user's September 8 reference screenshot. Experience, projects and photography remain on their own pages. English and Chinese each have static HTML pages so navigation does not flash the wrong language.
 
 At 1320px the outer header/footer margin becomes 32px. At 900px navigation becomes a toggled two-column menu, content uses 32px side gutters, and page top padding becomes 56px. At 600px, gutters become 20px and page padding becomes 44px above and 56px below. Experience, education, skills, projects, and photographs collapse to one column.
 
