@@ -61,7 +61,6 @@ function renderPortfolio(language) {
         <h4>${content.deliverablesLabel}</h4>
         <ul>${deliverables}</ul>
       </div>
-      <p class="project-status">${language === "zh-CN" ? "项目由客户在两个月后暂停，未开展谷歌广告投放。原网站截图未留存，因此这里以文字记录工作过程。" : "The client paused the project after two months. Google Ads were not run. Original site screenshots were not retained, so this case documents the work in text."}</p>
     </article>`;
 }
 

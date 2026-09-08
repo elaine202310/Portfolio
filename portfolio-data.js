@@ -6,32 +6,32 @@ window.portfolioContent = {
   en: {
     deliverablesLabel: "Key deliverables",
     project: {
-      title: "Shopify Store Setup & Digital Operations",
+      title: "Independent Website & Digital Content",
       subtitle: "Outdoor Living Niche",
-      meta: "Freelance / Independent Project · 2 Months",
+      meta: "Part-time · Aug 2024 — Oct 2024",
       summary: "A focused channel-exploration project for an Amazon seller entering direct-to-consumer e-commerce with high-ticket outdoor furniture and equipment.",
-      tags: ["Shopify", "On-Page SEO", "Instagram & TikTok", "Data Analytics"],
+      tags: ["Website Setup", "Video Production", "TikTok · Instagram · YouTube", "Visual Reporting"],
       deliverables: [
-        "Built a complete, responsive Shopify store tailored for high-ticket outdoor furniture, including outdoor sofas, fire pits, and BBQ grills.",
+        "Built an independent website for outdoor furniture and equipment, including outdoor sofas, fire pits, and BBQ grills.",
         "Authored the website copy and drafted initial on-page SEO work.",
-        "Executed social media content across Instagram and TikTok, publishing visual posts to build organic reach.",
-        "Reviewed weekly engagement and click data to understand traffic trends."
+        "Shot and edited videos, and published promotional content across TikTok, Instagram, and YouTube.",
+        "Produced weekly visual reports analysing content performance and click data."
       ]
     }
   },
   "zh-CN": {
     deliverablesLabel: "主要工作",
     project: {
-      title: "Shopify 独立站搭建与数字运营",
+      title: "独立站搭建与数字内容运营",
       subtitle: "户外生活品类",
-      meta: "自由职业 / 独立项目 · 两个月",
+      meta: "兼职 · 2024 年 8 月 — 10 月",
       summary: "为一位计划从亚马逊拓展至独立站渠道的商家完成阶段性项目，产品以高客单价户外家具与硬件为主。",
-      tags: ["Shopify", "站内 SEO", "Instagram 与 TikTok", "数据分析"],
+      tags: ["网站搭建", "视频拍摄与剪辑", "TikTok · Instagram · YouTube", "可视化报告"],
       deliverables: [
-        "完成响应式 Shopify 商店搭建，覆盖户外沙发、火炉与 BBQ 烤炉等高客单价户外产品。",
+        "为户外家具与用品商家搭建独立网站，产品涵盖户外沙发、火炉与烧烤炉等。",
         "撰写网站文案，并起草前期站内搜索优化内容。",
-        "执行 Instagram 与 TikTok 社交媒体内容发布，通过视觉图文与短视频积累自然触达。",
-        "每周跟踪互动与点击指标，观察用户行为和流量趋势。"
+        "独立拍摄、剪辑视频，在 TikTok、Instagram 和 YouTube 发布宣传内容。",
+        "每周制作可视化数据报告，分析内容表现与点击数据。"
       ]
     }
   }

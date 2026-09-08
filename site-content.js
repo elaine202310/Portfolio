@@ -2,8 +2,15 @@
 // 摄影专题和照片请编辑 gallery-data.js；项目经历请编辑 portfolio-data.js。
 window.translations = {
   en: {
+    job3Date: "Aug 2024 — Oct 2024",
+    job3Place: "Part-time",
+    job3Title: "Website Development & Digital Content",
+    job3Company: "Outdoor furniture & equipment business",
+    job3Bullet1: "Built an independent e-commerce website and prepared its content for an outdoor furniture and equipment business.",
+    job3Bullet2: "Shot and edited videos, and published promotional content across TikTok, Instagram, and YouTube.",
+    job3Bullet3: "Produced weekly visual reports analysing content performance and click data to review trends.",
     homeWorkTitle: "Work & practice",
-    homeWorkBody: "Before returning to university, I spent three years working with business systems and workflows. Along the way, I also helped build and operate a Shopify store for an outdoor-living business.",
+    homeWorkBody: "I have three years of experience in business systems and application support, alongside hands-on work in front-end development and e-commerce websites.",
     homeWorkLink: "More about my experience",
     homeLifeTitle: "Outside the screen",
     homeLifeBody: "Photography and hiking are part of my life outside work and study. I helped photograph a New Year's Eve event, and I'd like to keep exploring natural, relaxed portraits.",
@@ -81,8 +88,15 @@ window.translations = {
     backToTop: "Back to top"
   },
   "zh-CN": {
+    job3Date: "2024 年 8 月 — 10 月",
+    job3Place: "兼职",
+    job3Title: "独立站搭建与数字内容运营",
+    job3Company: "户外家具与用品商家",
+    job3Bullet1: "为户外家具与用品商家搭建独立网站，并完成网站内容制作。",
+    job3Bullet2: "独立拍摄、剪辑视频，在 TikTok、Instagram 和 YouTube 发布宣传内容。",
+    job3Bullet3: "每周制作可视化数据报告，分析内容表现与点击数据，梳理变化趋势。",
     homeWorkTitle: "工作与实践",
-    homeWorkBody: "回到校园之前，我有三年的业务系统与流程相关工作经历。期间，我也参与了一个户外用品商家的 Shopify 独立站搭建与运营。",
+    homeWorkBody: "我有三年的业务系统与应用支持经验，也参与过前端开发和电商独立站搭建。",
     homeWorkLink: "了解我的经历",
     homeLifeTitle: "屏幕之外",
     homeLifeBody: "工作和学习之外，我喜欢摄影与徒步。我曾参与一次跨年活动的现场摄影，也想继续尝试轻松、自然的人像拍摄。",
@@ -160,4 +174,3 @@ window.translations = {
     backToTop: "返回顶部"
   }
 };
-
