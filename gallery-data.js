@@ -8,8 +8,8 @@ window.galleryAlbums = [
     id: "community-culture",
     title: { en: "Community & Culture", "zh-CN": "社区文化活动" },
     description: {
-      en: "Photographs I took at a community cultural event — live music, conversations, and a shared moment together.",
-      "zh-CN": "我拍摄的一组社区文化活动照片：现场演奏、交流与相聚的瞬间。",
+      en: "Chengdu · December 2025 · Photography by Hu Jiao. Live music, audience moments, and a community coming together.",
+      "zh-CN": "成都 · 2025 年 12 月 · 摄影：胡娇。记录现场演奏、观众互动与相聚的瞬间。",
     },
     photos: [
       {
@@ -22,11 +22,11 @@ window.galleryAlbums = [
         },
       },
       {
-        src: "assets/gallery/DSC07964.JPG",
-        caption: { en: "Conversations between moments.", "zh-CN": "活动间隙的交流。" },
+        src: "assets/gallery/DSC07995.JPG",
+        caption: { en: "Faces in the crowd.", "zh-CN": "观众席上的瞬间。" },
         alt: {
-          en: "Guests talking around tables beneath a wall sign reading Communicate with the world.",
-          "zh-CN": "来宾围桌交流，身后墙上写着让成都和世界沟通。",
+          en: "Seated guests reacting to the event, with one attendee raising a phone to capture the moment.",
+          "zh-CN": "观众席上的来宾观看活动，一位来宾举起手机记录现场。",
         },
       },
       {
