@@ -92,7 +92,8 @@ li::marker { color: var(--muted); }
 .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
 .gallery-empty { color: var(--muted); grid-column: 1 / -1; padding: 24px 0; border-block: 1px solid var(--line); font-size: 14px; }
 .gallery-preview { display: block; padding: 0; border: 0; background: none; width: 100%; overflow: hidden; }
-.gallery-media { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 350ms var(--ease); }
+.gallery-media { display: block; width: 100%; height: auto; transition: transform 350ms var(--ease); }
+.gallery-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .gallery-preview:hover .gallery-media { transform: scale(1.025); }
 .gallery-caption { margin-top: 12px; font-size: 14px; color: var(--muted); }
 .lightbox { width: min(1000px,94vw); max-height: 92dvh; padding: 48px 24px 24px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); }
