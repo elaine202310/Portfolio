@@ -8,8 +8,8 @@ window.galleryAlbums = [
     id: "community-culture",
     title: { en: "Community & Culture", "zh-CN": "社区文化活动" },
     description: {
-      en: "Chengdu · December 2025 · Photography by Hu Jiao. Live music, audience moments, and a community coming together.",
-      "zh-CN": "成都 · 2025 年 12 月 · 摄影：胡娇。记录现场演奏、观众互动与相聚的瞬间。",
+      en: "Chengdu · December 2025\nPhotography by Jiao Hu",
+      "zh-CN": "成都 · 2025 年 12 月\n摄影：胡娇",
     },
     photos: [
       {

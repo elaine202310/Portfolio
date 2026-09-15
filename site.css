@@ -88,7 +88,7 @@ li::marker { color: var(--muted); }
 /* 摄影：gallery-data.js 管理专题；缺失照片不生成假图。 */
 .gallery-intro { max-width: 65ch; font-size: 18px; margin-bottom: 48px; }
 .gallery-album + .gallery-album { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
-.gallery-album-description { color: var(--muted); margin-top: 10px; margin-bottom: 24px; }
+.gallery-album-description { color: var(--muted); font-size: 14px; white-space: pre-line; margin-top: 10px; margin-bottom: 24px; }
 .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
 .gallery-empty { color: var(--muted); grid-column: 1 / -1; padding: 24px 0; border-block: 1px solid var(--line); font-size: 14px; }
 .gallery-preview { display: block; padding: 0; border: 0; background: none; width: 100%; overflow: hidden; }
