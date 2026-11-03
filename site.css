@@ -51,7 +51,15 @@ h3 { font-size: 1.35rem; }
 .hero-subtitle { font-size: clamp(1.4rem,3vw,2rem); line-height: 1.4; letter-spacing: -.02em; }
 .intro-copy { margin-top: 32px; font-size: 19px; line-height: 1.8; max-width: 68ch; }
 .intro-copy p + p { margin-top: 22px; }
-.contact-row { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-top: 36px; }
+.contact-row { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; margin-top: 36px; }
+.contact-details { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; color: var(--muted); font-size: 16px; }
+.contact-details .plain-email,.contact-details .linkedin-link { color: inherit; }
+.hero-copy-email { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; padding: 2px; border: 0; background: transparent; color: inherit; }
+.hero-copy-email:hover { color: var(--accent); }
+.copy-symbol { width: 18px; height: 18px; }
+.copy-check { display: none; font-size: 18px; line-height: 1; }
+.hero-copy-email.is-copied .copy-symbol { display: none; }
+.hero-copy-email.is-copied .copy-check { display: inline; color: var(--accent); }
 .contact-button { display: inline-flex; align-items: center; justify-content: center; gap: 14px; padding: 12px 21px; border-radius: 4px; background: var(--accent); color: white; text-decoration: none; transition: background 180ms,transform 220ms var(--ease); }
 .contact-button:hover { background: #853d2b; transform: translateY(-2px); }
 .plain-email { text-decoration: none; overflow-wrap: anywhere; }

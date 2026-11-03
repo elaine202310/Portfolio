@@ -88,6 +88,8 @@ window.translations = {
     contactButton: "Email Elaine (Jiao) Hu",
     copyEmail: "Copy email",
     copySuccess: "Copied ✓",
+    copyAria: "Copy email",
+    copySuccessAria: "Email copied",
     linkedinLabel: "LinkedIn",
     backToTop: "Back to top"
   },
@@ -178,6 +180,8 @@ window.translations = {
     contactButton: "发送邮件给胡娇",
     copyEmail: "复制邮箱",
     copySuccess: "已复制 ✓",
+    copyAria: "复制邮箱",
+    copySuccessAria: "邮箱已复制",
     linkedinLabel: "LinkedIn",
     backToTop: "返回顶部"
   }

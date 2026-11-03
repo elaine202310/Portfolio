@@ -38,6 +38,18 @@ function setLanguage(language) {
 
 document.querySelectorAll(".copy-email").forEach((button) => {
   button.addEventListener("click", async () => {
+    if (button.dataset.copyCompact === "true") {
+      try {
+        await navigator.clipboard.writeText("jiaohu368@gmail.com");
+        button.classList.add("is-copied");
+        button.setAttribute("aria-label", translations[document.documentElement.lang]?.copySuccessAria || "Email copied");
+        window.setTimeout(() => {
+          button.classList.remove("is-copied");
+          button.setAttribute("aria-label", translations[document.documentElement.lang]?.copyAria || "Copy email");
+        }, 1600);
+      } catch {}
+      return;
+    }
     const label = button.querySelector("[data-i18n]");
     try {
       await navigator.clipboard.writeText("jiaohu368@gmail.com");
