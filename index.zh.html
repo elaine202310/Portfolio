@@ -57,7 +57,7 @@
           <button type="button" data-lang="en" aria-pressed="false">EN</button>
           <button type="button" data-lang="zh-CN" aria-pressed="true">中文</button>
         </div>
-        <a class="header-email" href="mailto:jiaohu368@gmail.com" data-i18n="contactShort">邮件</a>
+        <a class="header-email" href="#contact" data-i18n="contactShort">联系</a>
       </div>
     </header>
 
@@ -70,8 +70,11 @@
           <p data-i18n="heroBody2">这里记录我的工作经历、独立项目与摄影。</p>
         </div>
         <div class="contact-row">
-          <a class="contact-button" href="mailto:jiaohu368@gmail.com"><span data-i18n="contactLabel">联系我</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+          <a class="contact-button" href="#contact"><span data-i18n="contactLabel">联系我</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
           <a class="plain-email" href="mailto:jiaohu368@gmail.com">jiaohu368@gmail.com</a>
+          <button class="copy-email" type="button"><span data-i18n="copyEmail">复制邮箱</span></button>
+          <span aria-hidden="true">·</span>
+          <a class="linkedin-link" href="https://www.linkedin.com/in/elaine-jiao-hu/" target="_blank" rel="noopener noreferrer" data-i18n="linkedinLabel">LinkedIn</a>
         </div>
       </section>
 
@@ -93,9 +96,23 @@
         </div>
       </section>
     </main>
-    <footer class="site-footer">
-      <p data-i18n="location">澳大利亚悉尼</p>
-      <p>© <span id="year"></span> <span data-i18n="profileName">胡娇</span></p>
+    <footer id="contact" class="contact-footer" aria-labelledby="contact-title">
+      <div class="contact-footer-main">
+        <p class="contact-eyebrow" data-i18n="contactEyebrow">联系</p>
+        <h2 id="contact-title" data-i18n="contactTitle">欢迎与我交流。</h2>
+        <p class="contact-footer-body" data-i18n="contactBody">欢迎与我交流实用软件、数字项目、业务系统，以及学习或合作机会。</p>
+        <div class="contact-footer-links">
+          <a class="plain-email" href="mailto:jiaohu368@gmail.com">jiaohu368@gmail.com</a>
+          <button class="copy-email" type="button"><span data-i18n="copyEmail">复制邮箱</span></button>
+          <span aria-hidden="true">·</span>
+          <a class="linkedin-link" href="https://www.linkedin.com/in/elaine-jiao-hu/" target="_blank" rel="noopener noreferrer" data-i18n="linkedinLabel">LinkedIn</a>
+        </div>
+      </div>
+      <div class="contact-footer-meta">
+        <p data-i18n="location">澳大利亚悉尼</p>
+        <p>© <span id="year"></span> <span data-i18n="profileName">胡娇</span></p>
+        <a href="#main" data-i18n="backToTop">返回顶部</a>
+      </div>
     </footer>
   </body>
 </html>

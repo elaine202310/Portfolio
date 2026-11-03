@@ -36,6 +36,21 @@ function setLanguage(language) {
   document.querySelectorAll("[data-page]").forEach((link) => { if (link.tagName === "A") { const url = new URL(link.href); url.searchParams.set("lang", language); link.href = url.href; } });
 }
 
+document.querySelectorAll(".copy-email").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const label = button.querySelector("[data-i18n]");
+    try {
+      await navigator.clipboard.writeText("jiaohu368@gmail.com");
+      label.textContent = translations[document.documentElement.lang]?.copySuccess || "Copied ✓";
+      window.setTimeout(() => {
+        label.textContent = translations[document.documentElement.lang]?.copyEmail || "Copy email";
+      }, 1600);
+    } catch {
+      label.textContent = translations[document.documentElement.lang]?.copyEmail || "Copy email";
+    }
+  });
+});
+
 function renderTags(tags) {
   return `<ul class="tech-list">${tags.map((tag) => `<li>${tag}</li>`).join("")}</ul>`;
 }
