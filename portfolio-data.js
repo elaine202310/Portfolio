@@ -23,17 +23,31 @@ window.portfolioContent = {
         ]
       },
       {
-        title: "Independent Website & Digital Content",
-        type: "Web & digital content",
-        workType: "Personal project",
-        date: "Jul 2024 — Oct 2024",
-        summary: "A focused channel-exploration project for an Amazon seller entering direct-to-consumer e-commerce with high-ticket outdoor furniture and equipment.",
-        tags: ["Website setup", "Video production", "TikTok · Instagram · YouTube", "Visual reporting"],
+        title: "Collectibles Authentication Mini Program & Admin Portal",
+        type: "Front-end application",
+        workType: "Team project",
+        date: "May 2025 — Aug 2025",
+        summary: "A team-built mini program and administration portal for a collectibles authentication workflow.",
+        tags: ["Vue", "JavaScript", "API integration", "Zion"],
         deliverables: [
-          "Built an independent website for outdoor furniture and equipment, including outdoor sofas, fire pits, and BBQ grills.",
-          "Authored the website copy and drafted initial on-page SEO work.",
-          "Shot and edited videos, and published promotional content across TikTok, Instagram, and YouTube.",
-          "Produced weekly visual reports analysing content performance and click data."
+          "Implemented front-end screens and workflow-status interactions for the mini program and admin portal.",
+          "Integrated the interface with backend APIs supplied by the team.",
+          "Used Vue, JavaScript, HBuilderX, and Zion visual tools in an iterative delivery workflow.",
+          "Participated in code checks, demonstrations, and feedback-driven revisions."
+        ]
+      },
+      {
+        title: "Smart Job — Recruitment Data Analysis & Job Matching Platform",
+        type: "Data application",
+        workType: "University project",
+        date: "2025",
+        summary: "A data-driven recruitment platform combining job collection, structured storage, visual analysis, and rule-based matching.",
+        tags: ["Python", "Flask", "MySQL", "ECharts"],
+        deliverables: [
+          "Collected and processed recruitment data with Selenium and BeautifulSoup.",
+          "Built Flask routes and MySQL-backed data workflows for the platform.",
+          "Presented recruitment trends through ECharts visualisations.",
+          "Implemented rule-based matching to connect job requirements with candidate profiles."
         ]
       }
     ]
@@ -58,17 +72,31 @@ window.portfolioContent = {
         ]
       },
       {
-        title: "独立站搭建与数字内容运营",
-        type: "网站与数字内容",
-        workType: "个人项目",
-        date: "2024 年 7 月 — 10 月",
-        summary: "为一位计划从亚马逊拓展至独立站渠道的商家完成阶段性项目，产品以高客单价户外家具与硬件为主。",
-        tags: ["网站搭建", "视频拍摄与剪辑", "TikTok · Instagram · YouTube", "可视化报告"],
+        title: "收藏品鉴定小程序与管理后台",
+        type: "前端应用",
+        workType: "团队项目",
+        date: "2025 年 5 月 — 8 月",
+        summary: "一个围绕收藏品鉴定流程搭建的小程序与管理后台团队项目。",
+        tags: ["Vue", "JavaScript", "API 对接", "Zion"],
         deliverables: [
-          "为户外家具与用品商家搭建独立网站，产品涵盖户外沙发、火炉与烧烤炉等。",
-          "撰写网站文案，并起草前期站内搜索优化内容。",
-          "独立拍摄、剪辑视频，在 TikTok、Instagram 和 YouTube 发布宣传内容。",
-          "每周制作可视化数据报告，分析内容表现与点击数据。"
+          "为小程序和管理后台实现前端页面及鉴定流程状态交互。",
+          "对接团队提供的后端 API，完成前后端数据联动。",
+          "使用 Vue、JavaScript、HBuilderX 和 Zion 可视化工具参与迭代开发。",
+          "参与代码检查、产品演示和基于反馈的修改。"
+        ]
+      },
+      {
+        title: "Smart Job — 招聘数据分析与岗位匹配平台",
+        type: "数据应用",
+        workType: "课程项目",
+        date: "2025 年",
+        summary: "一个结合招聘数据采集、结构化存储、可视化分析与规则匹配的平台。",
+        tags: ["Python", "Flask", "MySQL", "ECharts"],
+        deliverables: [
+          "使用 Selenium 和 BeautifulSoup 采集并处理招聘数据。",
+          "使用 Flask 和 MySQL 搭建平台路由与数据流程。",
+          "通过 ECharts 可视化呈现招聘趋势。",
+          "实现基于规则的岗位要求与候选人画像匹配。"
         ]
       }
     ]
