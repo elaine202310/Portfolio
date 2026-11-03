@@ -45,8 +45,18 @@ function renderPortfolio(language) {
   const content = window.portfolioContent?.[language] || window.portfolioContent?.en;
   if (!container || !content) return;
   const project = content.project;
+  const linkedProject = content.linkedProject;
   const deliverables = project.deliverables.map((item) => `<li>${item}</li>`).join("");
   container.innerHTML = `
+    <article class="project-link-entry">
+      <h3>${linkedProject.title}</h3>
+      <a class="project-external-link" href="${linkedProject.url}" target="_blank" rel="noopener noreferrer" aria-label="${linkedProject.linkDescription}">
+        <span>${linkedProject.linkLabel}</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M7 17 17 7M7 7h10v10" />
+        </svg>
+      </a>
+    </article>
     <article class="project-case-card">
       <div class="project-heading">
         <h3>${project.title}</h3>

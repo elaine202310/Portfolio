@@ -4,6 +4,12 @@
  */
 window.portfolioContent = {
   en: {
+    linkedProject: {
+      title: "BroadView Daily",
+      url: "https://broadview-daily.vercel.app/",
+      linkLabel: "Visit website",
+      linkDescription: "Visit BroadView Daily (opens in a new tab)",
+    },
     deliverablesLabel: "Key deliverables",
     project: {
       title: "Independent Website & Digital Content",
@@ -20,6 +26,12 @@ window.portfolioContent = {
     }
   },
   "zh-CN": {
+    linkedProject: {
+      title: "BroadView Daily",
+      url: "https://broadview-daily.vercel.app/",
+      linkLabel: "访问网站",
+      linkDescription: "访问 BroadView Daily（在新标签页打开）",
+    },
     deliverablesLabel: "主要工作",
     project: {
       title: "独立站搭建与数字内容运营",
