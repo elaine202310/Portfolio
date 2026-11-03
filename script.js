@@ -59,34 +59,31 @@ function renderPortfolio(language) {
   const container = document.getElementById("portfolio-list");
   const content = window.portfolioContent?.[language] || window.portfolioContent?.en;
   if (!container || !content) return;
-  const project = content.project;
-  const linkedProject = content.linkedProject;
-  const deliverables = project.deliverables.map((item) => `<li>${item}</li>`).join("");
-  container.innerHTML = `
-    <article class="project-link-entry">
-      <h3>${linkedProject.title}</h3>
-      <a class="project-external-link" href="${linkedProject.url}" target="_blank" rel="noopener noreferrer" aria-label="${linkedProject.linkDescription}">
-        <span>${linkedProject.linkLabel}</span>
+  const projects = content.projects || [];
+  container.innerHTML = projects.map((project) => {
+    const deliverables = project.deliverables.map((item) => `<li>${item}</li>`).join("");
+    const link = project.url ? `
+      <a class="project-external-link" href="${project.url}" target="_blank" rel="noopener noreferrer" aria-label="${project.linkDescription}">
+        <span>${project.linkLabel}</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
           <path d="M7 17 17 7M7 7h10v10" />
         </svg>
-      </a>
-    </article>
-    <article class="project-case-card">
-      <div class="project-heading">
-        <h3>${project.title}</h3>
-        <p class="project-subtitle">${project.subtitle}</p>
-        <p class="project-meta">${project.meta}</p>
-      </div>
-      <div class="project-case-summary">
-        <p>${project.summary}</p>
+      </a>` : "";
+    return `
+      <article class="project-card">
+        <header class="project-card-header">
+          <h3>${project.title}</h3>
+          ${link}
+        </header>
+        <p class="project-meta">${project.type} · ${project.workType} · ${project.date}</p>
+        <p class="project-card-summary">${project.summary}</p>
         ${renderTags(project.tags)}
-      </div>
-      <div class="project-deliverables">
-        <h4>${content.deliverablesLabel}</h4>
-        <ul>${deliverables}</ul>
-      </div>
-    </article>`;
+        <div class="project-deliverables">
+          <h4>${content.deliverablesLabel}</h4>
+          <ul>${deliverables}</ul>
+        </div>
+      </article>`;
+  }).join("");
 }
 
 const lightbox = document.getElementById("gallery-lightbox");
