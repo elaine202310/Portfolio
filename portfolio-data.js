@@ -25,15 +25,15 @@ window.portfolioContent = {
       {
         title: "Collectibles Authentication Mini Program & Admin Portal",
         type: "Front-end application",
-        workType: "Team project",
+        workType: "Part-time, remote team project",
         date: "May 2025 — Aug 2025",
-        summary: "A team-built mini program and administration portal for a collectibles authentication workflow.",
+        summary: "A multi-stage collectibles authentication workflow spanning item submission, review, shipping, expert assessment, report issuance, and return delivery.",
         tags: ["Vue", "JavaScript", "API integration", "Zion"],
         deliverables: [
-          "Implemented front-end screens and workflow-status interactions for the mini program and admin portal.",
-          "Integrated the interface with backend APIs supplied by the team.",
-          "Used Vue, JavaScript, HBuilderX, and Zion visual tools in an iterative delivery workflow.",
-          "Participated in code checks, demonstrations, and feedback-driven revisions."
+          "Developed frontend pages for each stage of the authentication workflow, from item submission to return delivery.",
+          "Built interfaces using Vue, JavaScript, and HBuilderX, with selected pages configured using Zion visual tools.",
+          "Integrated backend APIs to display authentication progress and support actions at each workflow stage.",
+          "Coordinated API fields and workflow status transitions with backend developers, troubleshooting integration issues through testing and team feedback."
         ]
       },
       {
@@ -74,15 +74,15 @@ window.portfolioContent = {
       {
         title: "收藏品鉴定小程序与管理后台",
         type: "前端应用",
-        workType: "团队项目",
+        workType: "兼职、远程团队项目",
         date: "2025 年 5 月 — 8 月",
-        summary: "一个围绕收藏品鉴定流程搭建的小程序与管理后台团队项目。",
+        summary: "一个覆盖提交、审核、寄送、专家鉴定、报告出具与返还寄送的多阶段收藏品鉴定流程项目。",
         tags: ["Vue", "JavaScript", "API 对接", "Zion"],
         deliverables: [
-          "为小程序和管理后台实现前端页面及鉴定流程状态交互。",
-          "对接团队提供的后端 API，完成前后端数据联动。",
-          "使用 Vue、JavaScript、HBuilderX 和 Zion 可视化工具参与迭代开发。",
-          "参与代码检查、产品演示和基于反馈的修改。"
+          "为从提交到返还寄送的各个鉴定流程阶段开发前端页面。",
+          "使用 Vue、JavaScript 和 HBuilderX 构建界面，部分页面使用 Zion 可视化工具配置。",
+          "对接后端 API，展示鉴定进度并支持各阶段操作。",
+          "与后端开发人员协调 API 字段和流程状态转换，通过测试与团队反馈排查集成问题。"
         ]
       },
       {
